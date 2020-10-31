@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-md-12 offset-md-12">
+		<div class="card mt-4 text-center">
+			<div class="card-header">
+				<h4>Profile</h4>
+			</div>
+			<div class="card-body">
+				<p><%= user.email%></p>
+				<p><%= user.password%></p>
+				<p><%= user._id%></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%- layout('layouts/main.ejs') %>

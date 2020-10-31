@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/css/styles.css">
+	<link rel="stylesheet" href="/public/css/all.min.css">
+	<title>Login Passport</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<div class="container">
+			<a class="navbar-brand" href="/">
+				<h3>TasksNexo</h3>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<% if(user){ %>
+						<li class="nav-item">
+							<a href="/profile" class="nav-link">Profile</a>
+						</li>
+						<li class="nav-item">
+							<a href="/logout" class="nav-link">LogOut</a>
+						</li>
+					<% } else{ %>
+						<li class="nav-item">
+							<a href="/signup" class="nav-link">SignUp</a>
+						</li>
+						<li class="nav-item">
+							<a href="/signin" class="nav-link">SignIn</a>
+						</li>
+					<% } %>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<%- body %>
+		<% if(signupMessage.length > 0){ %>
+			<div class="alert alert-danger"><%= signupMessage %></div>
+		<% } %>
+		<% if(signinMessage.length > 0){ %>
+			<div class="alert alert-danger"><%= signinMessage %></div>
+		<% } %>
+	</div>
+	<script src="/public/js/all.min.js"></script>
+	<script src="/public/js/jquery-3.5.1.min.js"></script>
+	<script src="/public/js/scripts.js"></script>
+</body>
+</html>

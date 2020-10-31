@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+    loginpassportnode:
+        container_name: loginpassport-app
+        restart: always
+        build: .
+        ports:
+            - "4000:3000"
+        links:
+            - loginpassportmongo
+        volumes:
+            - .:/app/passport-login
+    loginpassportmongo:
+        container_name: loginpassport-db
+        image: mongo
+        ports:
+            - "27017:27017"
+        logging:
+            driver: none
