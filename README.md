@@ -46,7 +46,7 @@ npm run dev
 
 ### Importante!
 
-Esta es una pequeña aplicación sin frontend, por lo que deberás usar un cliente REST, el de tu preferencia, por ejemplo Postman, Insomnia, AdvancedRestClient, puglins de tu editor de códigos, funcionalidades de tu IDE favorito o simplemente con curl desde tu terminal.
+Esta es una pequeña aplicación con frontend usando motores de plantillas, por lo que si tienes algún problema, revisa los archivos de la carpeta **views**.
 
 ### Problemas
 
